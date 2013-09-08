@@ -1,3 +1,5 @@
+require 'rubygems' 
+require 'rspec'
 # require_relative 'book.rb'
 # load 'book.rb'
 
