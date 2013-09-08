@@ -18,8 +18,8 @@ Basic Features:
 
 Premium Features
 -------
--Books should have optional attributes for year-published and edition
--Users should be able to import a .csv file with a list of books to add to the library
--Users should be able to leave reviews on books with both a rating and an optional written review
--Users should be able to schedule a future check-out for a book that is currently checked-out
--Users should be able to do a one-time extension for a week if no one has scheduled a future check-out for that book
+- Books should have optional attributes for year-published and edition
+- Users should be able to import a .csv file with a list of books to add to the library
+- Users should be able to leave reviews on books with both a rating and an optional written review
+- Users should be able to schedule a future check-out for a book that is currently checked-out
+- Users should be able to do a one-time extension for a week if no one has scheduled a future check-out for that book
