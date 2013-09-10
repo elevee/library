@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 class Book
 
 # Books should be able to have information saved about them (author, title, description)
