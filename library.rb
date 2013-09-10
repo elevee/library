@@ -1,7 +1,4 @@
-require 'rubygems' 
-require 'rspec'
-# require_relative 'book.rb'
-# load 'book.rb'
+require 'spec_helper'
 
 class Library
 
@@ -15,11 +12,15 @@ class Library
         # :borrowed_by => User object
         # :lost => boolean
 
-  def self.books
+  def self.books #getter
     @@book_collection
   end
 
-  def add_book(book_object)  # Users should be able to add books to a library
+  # def self.books=(input) #setter
+  #   @@book_collection = input
+  # end
+
+  def self.add_book(book_object)  # Users should be able to add books to a library
     new_book = {}
     book_details = {}
       book_details[:in_stock]    = true
