@@ -1,4 +1,5 @@
-require 'spec_helper'
+# require './spec_helper'
+require_relative './book.rb'
 
 class Library
 
@@ -63,12 +64,20 @@ class Library
   end
 
   def self.overdue?(book_object)
-    # Users should be able to check if a book is overdue
+    # Users should be able to check if a book is overdue, or check for an overdue books list.
+    if book_object
+      # find it
+      book = Library.book_status(book_object)
+      # Figure out if book is overdue
+      due_date = book[:due]
+    else
+      # get list of overdue books
+      self.books
+    end
+  end
 
-    # find it
-    book = Library.book_status(book_object)
-    # Figure out if book is overdue
-    due_date = book[:due]
+  def self.overdue
+
   end
 
   def something
