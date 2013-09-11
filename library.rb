@@ -1,5 +1,6 @@
 # require './spec_helper'
 require_relative './book.rb'
+# require_relative './seed.rb'
 
 class Library
 
@@ -64,20 +65,38 @@ class Library
   end
 
   def self.overdue?(book_object)
-    # Users should be able to check if a book is overdue, or check for an overdue books list.
-    if book_object
-      # find it
-      book = Library.book_status(book_object)
-      # Figure out if book is overdue
-      due_date = book[:due]
-    else
-      # get list of overdue books
-      self.books
-    end
+    # Users should be able to check if a specific book is overdue.
+    # find it
+    book = Library.book_status(book_object)
+    # Figure out if book is overdue
+    due_date = book[:due]
+    due_date < Time.now
   end
 
   def self.overdue
+    # Get all the books
+    
+    Library.books.each do |x|
+          
 
+    end
+
+    
+
+
+    # x = 0
+    # unless (x == Library.books.length) do |x|  
+    #   Library.books[x].values[x][:due]
+    #   x++
+    # end
+    
+      # Find the due key in the details hash
+
+
+      # Check to see if it > Current date
+      # If it is, return it in an array with other overdue books
+      # h.select {|k,v| v < 200}
+    end
   end
 
   def something
@@ -97,8 +116,18 @@ class Library
 
   end
   
+puts "Instantiatng a book"
+b = Book.new("Dave Thomas Says Elixir Is The Truth", "Thomas, Dave", "Dave's at it again! Elixir resembles Ruby, and all the cool kids are doing it!")
 
-end
+puts "adding it to the library"
+Library.add_book(b)
+
+time = Time.new(2013, 10, 31)
+Library.books[0].values[0][:due] = time
+
+puts 'Library.books[0].keys[0]'
+
+# end
 
 
 
